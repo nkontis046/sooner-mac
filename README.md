@@ -20,14 +20,12 @@ The drive this repo lives on writes `._*` AppleDouble files next to everything. 
 them, but a drag-and-drop upload won't: deploy from git, or delete them first
 (`find site -name '._*' -delete`).
 
-## Swap before launch
+## Where it lives
 
-1. **App Store link.** `https://apps.apple.com/gb/app/budgetmaker/idXXXXXXXXXX` is in
-   `index.html` once. Replace it when Apple assigns the app ID. Apple prefers its official
-   "Download on the Mac App Store" badge from the App Store marketing tools; the button uses the
-   same words, so you can swap the badge in.
-2. **Share image URL.** `og:image` is `assets/share.png`. Most crawlers want an absolute URL:
-   change it to `https://<your domain>/assets/share.png`.
+Published at https://nkontis046.github.io/budgetmaker/ from the GitHub repo
+`nkontis046/budgetmaker` (Pages, main branch, root). The App Store link points at app ID
+6836703564. Apple prefers its official "Download on the Mac App Store" badge from the App Store
+marketing tools; the button uses the same words, so you can swap the badge in.
 
 ## Where the pictures come from
 
