@@ -1,4 +1,4 @@
-# BudgetMaker: the site
+# Sooner: the site
 
 Two static pages, no build step, no scripts:
 
@@ -22,8 +22,8 @@ them, but a drag-and-drop upload won't: deploy from git, or delete them first
 
 ## Where it lives
 
-Published at https://nkontis046.github.io/budgetmaker/ from the GitHub repo
-`nkontis046/budgetmaker` (Pages, main branch, root). The App Store link points at app ID
+Published at https://nkontis046.github.io/sooner-mac/ from the GitHub repo
+`nkontis046/sooner-mac` (Pages, main branch, root). The App Store link points at app ID
 6836703564. Apple prefers its official "Download on the Mac App Store" badge from the App Store
 marketing tools; the button uses the same words, so you can swap the badge in.
 
@@ -32,7 +32,7 @@ marketing tools; the button uses the same words, so you can swap the badge in.
 Every picture is the real app on its built-in fake sample statements:
 
 - `assets/screens/*.png`: window captures from `tools/make_store_screenshots.sh` (it keeps the
-  raw captures in `~/Library/Caches/BudgetMaker/store-raw`), resized to 1600 wide.
+  raw captures in `~/Library/Caches/Sooner/store-raw`), resized to 1600 wide.
 - `assets/share.png`: the first App Store screenshot, resized.
 - The icons are the real app icon, rendered by Icon Composer's command-line tool from
-  `App/BudgetMaker/AppIcon.icon`.
+  `App/Sooner/AppIcon.icon`.
