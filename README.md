@@ -1,0 +1,40 @@
+# BudgetMaker: the site
+
+Two static pages, no build step, no scripts:
+
+- `index.html`: the landing page (the App Store's Marketing URL)
+- `privacy.html`: support, privacy policy, terms of use and copyright on one page. It's both the
+  App Store's Support URL (`privacy.html#support`) and its Privacy Policy URL
+  (`privacy.html#privacy`).
+
+`css/site.css` styles both, in light and dark.
+
+## Publish
+
+Any static host works. Point it at this folder:
+
+- **GitHub Pages**: Settings → Pages → deploy from branch, folder `/site`.
+- **Cloudflare Pages / Netlify**: build command none, output directory `site`.
+
+The drive this repo lives on writes `._*` AppleDouble files next to everything. Git ignores
+them, but a drag-and-drop upload won't: deploy from git, or delete them first
+(`find site -name '._*' -delete`).
+
+## Swap before launch
+
+1. **App Store link.** `https://apps.apple.com/gb/app/budgetmaker/idXXXXXXXXXX` is in
+   `index.html` once. Replace it when Apple assigns the app ID. Apple prefers its official
+   "Download on the Mac App Store" badge from the App Store marketing tools; the button uses the
+   same words, so you can swap the badge in.
+2. **Share image URL.** `og:image` is `assets/share.png`. Most crawlers want an absolute URL:
+   change it to `https://<your domain>/assets/share.png`.
+
+## Where the pictures come from
+
+Every picture is the real app on its built-in fake sample statements:
+
+- `assets/screens/*.png`: window captures from `tools/make_store_screenshots.sh` (it keeps the
+  raw captures in `~/Library/Caches/BudgetMaker/store-raw`), resized to 1600 wide.
+- `assets/share.png`: the first App Store screenshot, resized.
+- The icons are the real app icon, rendered by Icon Composer's command-line tool from
+  `App/BudgetMaker/AppIcon.icon`.
